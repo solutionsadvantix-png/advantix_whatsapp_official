@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_whatsapp" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.whatsapp</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="100"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="WhatsApp" string="WhatsApp Integration" name="advantix_whatsapp_official">
+                    <block title="WhatsApp Account Configuration">
+                        <setting id="default_account_setting" string="Default Account" help="Select the default WhatsApp account for automated messages.">
+                            <field name="whatsapp_account_id"/>
+                        </setting>
+                    </block>
+
+                    <block title="Automation &amp; Chatter Integration">
+                        <setting id="chatter_log_setting" string="Auto Chatter Logging" help="Log sent/received WhatsApp messages directly in the Chatter.">
+                            <field name="whatsapp_auto_post_chatter"/>
+                        </setting>
+                        <setting id="notify_fail_setting" string="Failure Alerts" help="Notify users when WhatsApp messages fail to deliver.">
+                            <field name="whatsapp_notify_on_fail"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Action to open WhatsApp Settings directly from module menu -->
+    <record id="action_whatsapp_configuration" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">current</field>
+        <field name="context">{'module': 'advantix_whatsapp_official'}</field>
+    </record>
+</odoo>

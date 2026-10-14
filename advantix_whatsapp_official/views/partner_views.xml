@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_whatsapp_inherit" model="ir.ui.view">
+        <field name="name">res.partner.form.whatsapp.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <button name="%(action_whatsapp_composer)d"
+                            string="Send WhatsApp"
+                            type="action"
+                            class="btn-primary"
+                            context="{'default_partner_id': id}"/>
+                </header>
+            </xpath>
+        </field>
+    </record>
+</odoo>

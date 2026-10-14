@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_inherit_whatsapp" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.whatsapp</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <!-- إضافة زر Send WhatsApp في الـ header بجانب أزرار الإرسال والإلغاء -->
+            <xpath expr="//header" position="inside">
+                <button name="action_send_whatsapp"
+                        type="object"
+                        string="Send WhatsApp"
+                        class="btn-secondary"
+                        icon="fa-whatsapp"
+                        invisible="state not in ('draft', 'sent', 'sale')"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

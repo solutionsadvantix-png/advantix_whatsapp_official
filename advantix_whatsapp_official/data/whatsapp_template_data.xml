@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- 1. Meta Default Approved Template (To test out of the box) -->
+        <record id="whatsapp_template_hello_world" model="whatsapp.template">
+            <field name="name">hello_world</field>
+            <field name="display_name">Meta Default Hello World</field>
+            <field name="language_code">en_US</field>
+            <field name="body_text">Welcome and congratulations!! This message demonstrates your ability to send a WhatsApp message notification...</field>
+        </record>
+
+        <!-- 2. Generic Custom Flexible Message Template (For Sale Orders & Invoices) -->
+        <record id="whatsapp_template_custom_message" model="whatsapp.template">
+            <field name="name">custom_message</field>
+            <field name="display_name">Custom Flexible Message</field>
+            <field name="language_code">en_US</field>
+            <field name="body_text">Hello {{1}}, {{2}}</field>
+        </record>
+
+    </data>
+</odoo>

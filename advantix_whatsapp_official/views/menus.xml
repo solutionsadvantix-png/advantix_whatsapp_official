@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- 1. Actions -->
+    <record id="action_whatsapp_account" model="ir.actions.act_window">
+        <field name="name">WhatsApp Accounts</field>
+        <field name="res_model">whatsapp.account</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_whatsapp_template" model="ir.actions.act_window">
+        <field name="name">WhatsApp Templates</field>
+        <field name="res_model">whatsapp.template</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_whatsapp_composer" model="ir.actions.act_window">
+        <field name="name">Send WhatsApp Message</field>
+        <field name="res_model">whatsapp.composer</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <!-- 2. Root Menu -->
+    <menuitem id="menu_whatsapp_root"
+              name="WhatsApp"
+              web_icon="advantix_whatsapp_official,static/description/icon.png"
+              sequence="10"/>
+
+    <!-- 3. Sub Menus -->
+    <!-- القائمة الأولى (sequence=10): تفتح صفحة الحسابات كاملة عند النقر على التطبيق -->
+    <menuitem id="menu_whatsapp_account_config"
+              name="Configuration"
+              parent="menu_whatsapp_root"
+              sequence="10"/>
+
+    <menuitem id="menu_whatsapp_account"
+              name="Accounts"
+              parent="menu_whatsapp_account_config"
+              action="action_whatsapp_account"
+              sequence="10"/>
+
+    <menuitem id="menu_whatsapp_template"
+              name="Templates"
+              parent="menu_whatsapp_root"
+              action="action_whatsapp_template"
+              sequence="20"/>
+
+    <menuitem id="menu_whatsapp_composer"
+              name="Send Message"
+              parent="menu_whatsapp_root"
+              action="action_whatsapp_composer"
+              sequence="30"/>
+</odoo>
