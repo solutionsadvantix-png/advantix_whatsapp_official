@@ -1,6 +1,6 @@
 {
     'name': 'Advantix WhatsApp Official | Direct Meta Cloud API Integration',
-    'version': '19.0.1.0.0',
+    'version': '18.0.1.0.0',
     'category': 'Marketing/WhatsApp',
     'summary': 'WhatsApp Integration Meta Cloud API WhatsApp Direct Message WhatsApp Sales WhatsApp Invoice Chatter WhatsApp Notification WhatsApp Template WhatsApp Messaging',
     'description': """
