@@ -1,5 +1,5 @@
 {
-    'name': 'Advantix WhatsApp Official | Direct Meta Cloud API Integration',
+    'name': 'WhatsApp Integration for Community & Enterprise | Meta Cloud API | WhatsApp Direct Messaging | WhatsApp Sales | WhatsApp Invoices | WhatsApp Chatter | WhatsApp Marketing | Whatsapp For Comunity | Meta For Comunity | Meta Integration',
     'version': '18.0.1.0.0',
     'category': 'Marketing/WhatsApp',
     'summary': 'WhatsApp Integration Meta Cloud API WhatsApp Direct Message WhatsApp Sales WhatsApp Invoice Chatter WhatsApp Notification WhatsApp Template WhatsApp Messaging',
